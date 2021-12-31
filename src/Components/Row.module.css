@@ -1,0 +1,34 @@
+.row {
+  margin-left: 3rem;
+}
+
+.rowPosters {
+  display: flex;
+  overflow: scroll;
+  overflow-y: hidden;
+  padding: 10px;
+}
+
+.rowPosters::-webkit-scrollbar {
+  display: none;
+}
+
+.rowPoster {
+  object-fit: contain;
+  width: 100%;
+  height: 11rem;
+  margin: 5px;
+  transition: transform 0.5s;
+  border-radius: 10px;
+}
+
+.rowPosterTrending {
+  height: 16rem;
+}
+
+.rowPoster:hover {
+  transform: scale(1.08);
+}
+.rowPosterTrending:hover {
+  transform: scale(1.09);
+}
