@@ -1,0 +1,59 @@
+.banner {
+  display: block;
+  overflow-y: hidden;
+  color: white;
+  overflow: hidden;
+}
+
+.bannerData {
+  position: absolute;
+  top: 13vw;
+  left: 4vw;
+}
+.bannerData {
+  width: 37rem;
+}
+
+.bannerData h1 {
+  font-size: 3vw;
+  width: 45vw;
+}
+.bannerData p {
+  font-weight: 400;
+  line-height: normal;
+  width: 100%;
+  font-size: 1.4vw;
+  text-shadow: 2px 2px 4px rgb(0 0 0 / 45%);
+  font-family: "Netflix Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.banner img {
+  object-fit: cover;
+  width: 100vw;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 40%, transparent 99%);
+}
+
+.bannerButton button {
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 0.5rem 0px;
+  padding-left: 1.3rem;
+  padding-right: 2rem;
+  margin: 0px 6px;
+  font-size: 1.2vw;
+  font-weight: 700;
+  outline: none;
+  border: none;
+  background-color: rgb(93 87 87 / 79%);
+}
+
+.bannerButton button:hover {
+  filter: brightness(0.8);
+}
+
+.bannerButton button i {
+  font-style: normal;
+  font-size: 2vw;
+  padding-right: 10px;
+  vertical-align: middle;
+}
