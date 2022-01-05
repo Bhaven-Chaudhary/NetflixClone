@@ -1,0 +1,48 @@
+.bottom {
+  margin-top: 138%;
+  margin-left: 9.5vw;
+  padding: 5% 4%;
+  font-family: "Netflix Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding-bottom: 10px;
+}
+
+.sponsers {
+  padding-left: 14px;
+}
+
+.sponsers img {
+  object-fit: contain;
+  height: 1.4vw;
+  margin-right: 2vw;
+}
+
+.bottom ul {
+  display: flex;
+  flex-direction: row;
+  padding-left: 0px;
+  flex-wrap: wrap;
+  row-gap: 18px;
+  width: 79vw;
+  margin-bottom: 2.5vw;
+}
+.bottom ul li {
+  list-style: none;
+  display: inline;
+  width: 17.8vw;
+  cursor: pointer;
+  color: #768b83f7;
+  font-size: 13px;
+}
+
+.bottom button {
+  color: #687e76;
+  background: transparent;
+  border: 1px solid #687e76;
+  padding: 7px 9px;
+}
+
+.bottom p {
+  color: #687e76;
+  font-size: 12px;
+  padding-top: 10px;
+}

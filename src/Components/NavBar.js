@@ -1,6 +1,6 @@
 import React from 'react'
 //import netflixLogo from '../netflixLogo.png'
-import searchicon from '../searchicon.png'
+import searchicon from '../logos/searchicon.png'
 
 import classes from './NavBar.module.css'
 import { useState, useEffect } from 'react'
