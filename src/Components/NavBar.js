@@ -1,5 +1,7 @@
 import React from 'react'
 //import netflixLogo from '../netflixLogo.png'
+import searchicon from '../searchicon.png'
+
 import classes from './NavBar.module.css'
 import { useState, useEffect } from 'react'
 
@@ -48,6 +50,9 @@ export default function NavBar() {
                     <li>My List</li>
                 </ul>
                 <div className={classes.accounts}>
+                    <img src={searchicon} style={{ height: '20px' }} alt="Search" />
+                    <p>Children</p>
+                    <i className="fa fa-bell"></i>
                     <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png" alt='account' />
                 </div>
             </div>
