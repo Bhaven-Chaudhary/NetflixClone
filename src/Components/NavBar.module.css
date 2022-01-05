@@ -2,7 +2,7 @@
   mask-image: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 1) 12%,
-    transparent 106%
+    transparent 102%
   );
   width: 100%;
   position: fixed;
@@ -17,11 +17,16 @@
   display: flex;
   width: 96%;
   position: fixed;
-  margin-left: 3.8vw;
+  padding-left: 3.8vw;
   z-index: 5;
   background-color: transparent;
   align-items: center;
   height: 5vw;
+  transition: background-color 0.4s;
+}
+
+.navDark {
+  background-color: rgb(20, 20, 20);
 }
 
 .navbar ul {
