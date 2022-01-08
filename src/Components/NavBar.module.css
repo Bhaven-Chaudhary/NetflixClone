@@ -44,17 +44,17 @@
   font-size: 1vw;
 }
 .navbar img {
-  height: 25px;
+  height: 2vw;
   object-fit: contain;
 }
 
-.navbar div img {
-  height: 32px;
+.accounts img {
+  height: 2.4vw;
   object-fit: contain;
   border-radius: 5px;
 }
 .navbar div i {
-  font-size: 20px;
+  font-size: 1.7vw;
 }
 
 .accounts {
@@ -62,7 +62,7 @@
   right: 5vw;
   display: flex;
   align-items: center;
-  gap: 23px;
+  gap: 1.9vw;
   cursor: pointer;
   font-size: 1vw;
 }

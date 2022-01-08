@@ -1,5 +1,5 @@
 .bottom {
-  margin-top: 138%;
+  margin-top: 127%;
   margin-left: 9.5vw;
   padding: 5% 4%;
   font-family: "Netflix Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -8,6 +8,7 @@
 
 .sponsers {
   padding-left: 14px;
+  padding-bottom: inherit;
 }
 
 .sponsers img {
@@ -21,7 +22,7 @@
   flex-direction: row;
   padding-left: 0px;
   flex-wrap: wrap;
-  row-gap: 18px;
+  row-gap: 1.2vw;
   width: 79vw;
   margin-bottom: 2.5vw;
 }
@@ -31,18 +32,26 @@
   width: 17.8vw;
   cursor: pointer;
   color: #768b83f7;
-  font-size: 13px;
+  font-size: 1vw;
 }
 
 .bottom button {
   color: #687e76;
   background: transparent;
   border: 1px solid #687e76;
-  padding: 7px 9px;
+  padding: 15px 10px;
+  font-size: 1vw;
 }
 
 .bottom p {
   color: #687e76;
-  font-size: 12px;
+  font-size: 0.8vw;
   padding-top: 10px;
+}
+.bottom ul li:hover {
+  text-decoration: underline;
+}
+.bottom button:hover {
+  border: 1px solid white;
+  color: white;
 }

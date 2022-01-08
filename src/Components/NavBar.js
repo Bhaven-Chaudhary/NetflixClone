@@ -50,7 +50,7 @@ export default function NavBar() {
                     <li>My List</li>
                 </ul>
                 <div className={classes.accounts}>
-                    <img src={searchicon} style={{ height: '20px' }} alt="Search" />
+                    <img src={searchicon} style={{ height: '1.5vw' }} alt="Search" />
                     <p>Children</p>
                     <i className="fa fa-bell"></i>
                     <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png" alt='account' />
