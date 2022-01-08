@@ -1,7 +1,5 @@
 .App {
   text-align: center;
-  margin: 0px;
-  padding: 0px;
 }
 
 .App-logo {
@@ -10,8 +8,8 @@
 }
 
 .rows {
-  position: absolute;
-  top: 41vw;
+  position: relative;
+  top: -16vw;
 }
 
 @media (prefers-reduced-motion: no-preference) {

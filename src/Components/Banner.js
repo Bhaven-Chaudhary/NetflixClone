@@ -36,7 +36,7 @@ export default function Banner() {
                 backgroundImage: `url(https://image.tmdb.org/t/p/original${bannerMovie.backdrop_path})`,
                 backgroundPosition: 'center center',
                 backgroundSize: 'contain',
-
+                backgroundRepeat: 'no-repeat'
             }}>
 
             {error && <h1>{error}</h1>}

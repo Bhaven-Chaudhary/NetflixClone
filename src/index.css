@@ -1,6 +1,11 @@
+* {
+  margin: 0; /* or   margin-top: 0; */
+}
+
 body {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
+
   background-color: #141414;
   color: white;
   font-family: "Netflix Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;

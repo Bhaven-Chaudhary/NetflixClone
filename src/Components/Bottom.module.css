@@ -1,5 +1,5 @@
 .bottom {
-  margin-top: 127%;
+  margin-top: -16vw;
   margin-left: 9.5vw;
   padding: 5% 4%;
   font-family: "Netflix Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -39,7 +39,7 @@
   color: #687e76;
   background: transparent;
   border: 1px solid #687e76;
-  padding: 15px 10px;
+  padding: 0.6vw;
   font-size: 1vw;
 }
 

@@ -5,12 +5,15 @@
 }
 
 .bannerData {
-  position: absolute;
-  top: 13vw;
-  left: 4vw;
-}
-.bannerData {
+  /* position: absolute; */
+  /* top: 13vw;
+  left: 4vw; */
   width: 37rem;
+
+  display: inline-block;
+  width: 37rem;
+  margin-top: 13vw;
+  margin-left: 4vw;
 }
 
 .bannerData h1 {
@@ -35,9 +38,9 @@
 .bannerButton button {
   border-radius: 8px;
   cursor: pointer;
-  padding: 0.5rem 0px;
-  padding-left: 1.3rem;
-  padding-right: 2rem;
+  padding: 0.5vw 0px;
+  padding-left: 1.5vw;
+  padding-right: 2.4vw;
   margin: 0px 10px;
   font-size: 1.2vw;
   font-weight: 700;

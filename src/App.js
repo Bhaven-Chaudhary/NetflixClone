@@ -7,8 +7,10 @@ import NavBar from './Components/NavBar';
 function App() {
   return (<>
 
+
+
     <NavBar></NavBar>
-    <Banner />
+    <Banner></Banner>
     <div className='rows'>
       <Row title='Trending Now' requestUrl={requestUrl.trendingUrl} trendingRow></Row>
       <Row title='Netflix Originals' requestUrl={requestUrl.netflixOriginalsUrl}></Row>
