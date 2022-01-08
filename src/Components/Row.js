@@ -4,7 +4,7 @@ import classes from './Row.module.css'
 let movieList;
 const posterBasePath = 'https://image.tmdb.org/t/p/original'
 
-export default function (props) {
+export default function Row(props) {
     const [movies, setMovies] = useState([]);
     const [error, setError] = useState(false);
 
@@ -32,18 +32,32 @@ export default function (props) {
     if (movies.length !== 0) {
 
         movieList = movies.results.map(movie => {
-            return <img key={movie.id} className={`${classes.rowPoster} ${trendingRow ? classes.rowPosterTrending : ''}`} key={movie.id} src={`${posterBasePath}${trendingRow ? movie.poster_path : movie.backdrop_path}`} alt={movie.title} />
+            return <img key={movie.id} className={`${classes.rowPoster} ${trendingRow ? classes.rowPosterTrending : ''}`} src={`${posterBasePath}${trendingRow ? movie.poster_path : movie.backdrop_path}`} alt={movie.title} />
         })
 
     }
+
+
+    // code to scroll content of rows
+
+    const slideRightHandler = () => {
+        document.getElementById(title.replaceAll(' ', '')).scrollLeft += 200;
+    }
+    const slideLeftHandler = () => {
+        document.getElementById(title.replaceAll(' ', '')).scrollLeft -= 200;
+    }
+
+    console.log(title.replaceAll(' ', ''))
 
     return (
         <div className={classes.row}>
             <h1>{title}</h1>
             {error && <h1>{error}</h1>}
-            <div className={classes.rowPosters}>
+            <div id={title.replaceAll(' ', '')} className={classes.rowPosters}>
                 {movieList}
             </div>
+            <button id='slideLeft' onClick={slideLeftHandler}>Left</button>
+            <button id='slideRight' onClick={slideRightHandler}>Right</button>
         </div>
     )
 }

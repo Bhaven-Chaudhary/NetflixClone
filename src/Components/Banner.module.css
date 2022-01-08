@@ -11,19 +11,20 @@
   width: 37rem;
 
   display: inline-block;
-  width: 37rem;
+  width: 25vw;
   margin-top: 13vw;
   margin-left: 4vw;
 }
 
 .bannerData h1 {
   font-size: 3vw;
-  width: 45vw;
+  width: 40vw;
 }
 .bannerData p {
   font-weight: 400;
   line-height: normal;
   width: 100%;
+  padding: 1vw 0px;
   font-size: 1.4vw;
   text-shadow: 2px 2px 4px rgb(0 0 0 / 45%);
   font-family: "Netflix Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -41,7 +42,7 @@
   padding: 0.5vw 0px;
   padding-left: 1.5vw;
   padding-right: 2.4vw;
-  margin: 0px 10px;
+  margin-right: 1.5vw;
   font-size: 1.2vw;
   font-weight: 700;
   outline: none;
