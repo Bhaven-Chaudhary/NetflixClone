@@ -31,10 +31,16 @@ export default function Banner() {
     }
 
     return (
-        <header className={classes.banner}>
+        <header className={classes.banner}
+            style={{
+                backgroundImage: `url(https://image.tmdb.org/t/p/original${bannerMovie.backdrop_path})`,
+                backgroundPosition: 'center center',
+                backgroundSize: 'contain',
+
+            }}>
 
             {error && <h1>{error}</h1>}
-            <img src={`https://image.tmdb.org/t/p/original${bannerMovie.backdrop_path}`} alt="banner" />
+            {/* <img src={`https://image.tmdb.org/t/p/original${bannerMovie.backdrop_path}`} alt="banner" /> */}
             <div className={classes.bannerData}>
 
                 <h1>{bannerMovie.title || bannerMovie.name || bannerMovie.original_name}</h1>
@@ -42,13 +48,13 @@ export default function Banner() {
 
 
                 <div className={classes.bannerButton}>
-                    <button style={{ backgroundColor: 'white' }}><i>&#9654;</i>Play</button>
+                    <button style={{ backgroundColor: 'white' }}><i style={{ fontSize: '1.9vw' }}>&#9654;</i>Play</button>
                     <button style={{
                         color: 'white'
-                    }}><i >&#9432;</i>More Info</button>
+                    }}><i>&#9432;</i>More Info</button>
                 </div>
             </div>
 
-        </header>
+        </header >
     )
 }

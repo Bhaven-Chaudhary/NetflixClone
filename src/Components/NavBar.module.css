@@ -39,9 +39,14 @@
   list-style: none;
   display: inline-block;
   color: #fff;
-  cursor: default;
   padding: 2px 0.7vw;
   font-size: 1vw;
+  cursor: pointer;
+  transition: color 0.4s ease-in;
+}
+
+.navbar ul li:hover {
+  color: #c2b0b0;
 }
 .navbar img {
   height: 2vw;

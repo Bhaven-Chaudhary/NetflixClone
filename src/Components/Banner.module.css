@@ -1,8 +1,7 @@
 .banner {
-  display: block;
-  overflow-y: hidden;
   color: white;
-  overflow: hidden;
+  height: 58vw;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 71%, transparent 88%);
 }
 
 .bannerData {
@@ -39,7 +38,7 @@
   padding: 0.5rem 0px;
   padding-left: 1.3rem;
   padding-right: 2rem;
-  margin: 0px 6px;
+  margin: 0px 10px;
   font-size: 1.2vw;
   font-weight: 700;
   outline: none;
