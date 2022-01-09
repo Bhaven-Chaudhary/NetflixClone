@@ -35,7 +35,7 @@ export default function Bottom() {
                 </ul>
 
                 <button>Service Code</button>
-                <p><span>&#169;</span> Netflix Clone App {'{jdhf99f8fh8f789hu}'}</p>
+                <p><span>&#169;</span> Netflix Clone App by Bhaven Chaudhary {'{jdhf99f8fh8f789hu}'}</p>
             </div>
 
         </>

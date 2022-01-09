@@ -53,11 +53,15 @@ export default function Row(props) {
         <div className={classes.row}>
             <h1>{title}</h1>
             {error && <h1>{error}</h1>}
-            <div id={title.replaceAll(' ', '')} className={classes.rowPosters}>
-                {movieList}
+            <div className={classes.rowContent}>
+                <button id='slideLeft' onClick={slideLeftHandler}>&lt;</button>
+                <div id={title.replaceAll(' ', '')} className={classes.rowPosters}>
+                    {movieList}
+                </div>
+                <button id='slideRight' onClick={slideRightHandler} style={{ right: '0' }}>&gt;</button>
             </div>
-            <button id='slideLeft' onClick={slideLeftHandler}>Left</button>
-            <button id='slideRight' onClick={slideRightHandler}>Right</button>
+
+
         </div>
     )
 }

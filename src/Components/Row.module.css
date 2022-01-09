@@ -1,5 +1,6 @@
 .row {
   margin-left: 4vw;
+  transition: all 0.2s ease;
 }
 .row h1 {
   cursor: pointer;
@@ -11,12 +12,30 @@
   overflow: scroll;
   overflow-y: hidden;
   padding: 10px 0px;
+  z-index: 1;
 }
 
 .rowPosters::-webkit-scrollbar {
   display: none;
 }
-
+.rowContent {
+  display: flex;
+  align-items: center;
+}
+.rowContent button {
+  height: 10vw;
+  padding: 1vw;
+  position: absolute;
+  font-size: xxx-large;
+  border: none;
+  background-color: transparent;
+  color: transparent;
+  z-index: 5;
+}
+.rowContent button:hover {
+  background-color: #5f62612b;
+  color: white;
+}
 .rowPoster {
   object-fit: contain;
   width: 100%;
