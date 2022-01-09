@@ -41,10 +41,14 @@ export default function Row(props) {
     // code to scroll content of rows
 
     const slideRightHandler = () => {
-        document.getElementById(title.replaceAll(' ', '')).scrollLeft += 200;
+        // document.getElementById(title.replaceAll(' ', '')).scrollLeft += 200;
+        document.getElementById(title.replaceAll(' ', '')).scrollBy({ left: 300, top: 0, behavior: 'smooth' });
     }
+
+
     const slideLeftHandler = () => {
-        document.getElementById(title.replaceAll(' ', '')).scrollLeft -= 200;
+        // document.getElementById(title.replaceAll(' ', '')).scrollLeft -= 200;
+        document.getElementById(title.replaceAll(' ', '')).scrollBy({ left: -300, top: 0, behavior: 'smooth' });
     }
 
     console.log(title.replaceAll(' ', ''))

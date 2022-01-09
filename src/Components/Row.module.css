@@ -1,6 +1,5 @@
 .row {
   margin-left: 4vw;
-  transition: all 0.2s ease;
 }
 .row h1 {
   cursor: pointer;
