@@ -1,8 +1,12 @@
+
+
 const API_KEY = 'b2776a4419852e57d3d8c258f87e6977'
+
+
 
 export default {
     trendingUrl: `https://api.themoviedb.org/3/trending/all/week?api_key=${API_KEY}&language=en-US`,
-    netflixOriginalsUrl: `https://api.themoviedb.org/3/discover/tv?api_key=${API_KEY}&with_networks=213`,
+    netflixOriginalsUrl: `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_networks=213`,
     topRatedUrl: `https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}&language=en-US`,
     actionMoviesUrl: `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=28`,
     crimeMoviesUrl: `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=80`,

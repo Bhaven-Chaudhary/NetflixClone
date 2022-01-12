@@ -18,15 +18,22 @@ export default function Row(props) {
             if (!res.ok) {
                 throw new Error('something went wrong')
             }
+            setError(false)
             return res.json()
         }
         ).then(data => {
             setMovies(data)
-            console.log(data)
-        }).catch(error =>
+            // console.log(data)
+        }).catch(error => {
+
             setError(error.message)
+        }
+
+
         )
     }, [requestUrl])
+
+    // console.log(movies)
 
 
     if (movies.length !== 0) {
@@ -35,7 +42,7 @@ export default function Row(props) {
             return <img key={movie.id}
                 className={`${classes.rowPoster} ${trendingRow ? classes.rowPosterTrending : ''}`}
                 src={`${posterBasePath}${trendingRow ? movie.poster_path : movie.backdrop_path}`}
-                alt={movie.title}
+                alt={movie.title ? movie.title : movie.name}
             />
         })
 
@@ -64,7 +71,7 @@ export default function Row(props) {
             <div className={classes.rowContent}>
                 <button id='slideLeft' onClick={slideLeftHandler}>&lt;</button>
                 <div id={title.replaceAll(' ', '')} className={classes.rowPosters}>
-                    {movieList}
+                    {!error && movieList}
                 </div>
                 <button id='slideRight' onClick={slideRightHandler} style={{ right: '0' }}>&gt;</button>
             </div>

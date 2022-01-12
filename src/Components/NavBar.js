@@ -1,6 +1,6 @@
 import React from 'react'
-//import netflixLogo from '../netflixLogo.png'
 import searchicon from '../logos/searchicon.png'
+import { NavLink } from 'react-router-dom'
 
 import classes from './NavBar.module.css'
 import { useState, useEffect } from 'react'
@@ -43,11 +43,22 @@ export default function NavBar() {
             <div className={`${classes.navbar} ${isScroll ? classes.navDark : ''}`}>
                 <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/799px-Netflix_2015_logo.svg.png' alt="Netflix" />
                 <ul>
-                    <li>Home</li>
-                    <li>TV Shows</li>
-                    <li>Movies</li>
-                    <li>New and Popular</li>
-                    <li>My List</li>
+                    <li>
+                        <NavLink to='/'>Home</NavLink>
+                    </li>
+
+                    <li>
+                        <NavLink to='tv'> TV Shows</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to='/movie'>Movies</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/popular">New and Popular</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/"> My List</NavLink>
+                    </li>
                 </ul>
                 <div className={classes.accounts}>
                     <img src={searchicon} style={{ height: '1.5vw' }} alt="Search" />

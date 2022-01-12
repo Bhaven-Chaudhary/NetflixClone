@@ -44,8 +44,12 @@
   cursor: pointer;
   transition: color 0.4s ease-in;
 }
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+}
 
-.navbar ul li:hover {
+.navbar ul li a:hover {
   color: #c2b0b0;
 }
 .navbar img {

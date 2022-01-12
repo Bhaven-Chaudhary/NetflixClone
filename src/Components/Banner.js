@@ -16,7 +16,7 @@ export default function Banner() {
         }).then(data => {
 
             setBannerMovie(data.results[Math.floor(Math.random() * data.results.length)])
-            console.log("banner data " + data)
+
         }).catch(error =>
             setError(error.message)
         )
@@ -25,7 +25,7 @@ export default function Banner() {
     const cutDescription = (s) => {
         if (s) {
             s = s.length > 200 ? s.substring(0, 200) + '...' : s;
-            console.log(s)
+
             return s
         }
     }

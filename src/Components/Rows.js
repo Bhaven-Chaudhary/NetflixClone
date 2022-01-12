@@ -1,9 +1,12 @@
 import React from 'react'
 import Row from "../Components/Row"
-import requestUrl from '../requestUrl'
 import classes from './Rows.module.css'
+import useRequestUrl from './useRequestUrl'
 
 export default function Rows() {
+
+    const requestUrl = useRequestUrl()
+
     return (
 
         <div className={classes.rows}>
