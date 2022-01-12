@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import classes from './Row.module.css'
 
+
 let movieList;
 const posterBasePath = 'https://image.tmdb.org/t/p/original'
 
@@ -28,11 +29,14 @@ export default function Row(props) {
     }, [requestUrl])
 
 
-
     if (movies.length !== 0) {
 
         movieList = movies.results.map(movie => {
-            return <img key={movie.id} className={`${classes.rowPoster} ${trendingRow ? classes.rowPosterTrending : ''}`} src={`${posterBasePath}${trendingRow ? movie.poster_path : movie.backdrop_path}`} alt={movie.title} />
+            return <img key={movie.id}
+                className={`${classes.rowPoster} ${trendingRow ? classes.rowPosterTrending : ''}`}
+                src={`${posterBasePath}${trendingRow ? movie.poster_path : movie.backdrop_path}`}
+                alt={movie.title}
+            />
         })
 
     }
@@ -51,7 +55,7 @@ export default function Row(props) {
         document.getElementById(title.replaceAll(' ', '')).scrollBy({ left: -300, top: 0, behavior: 'smooth' });
     }
 
-    console.log(title.replaceAll(' ', ''))
+
 
     return (
         <div className={classes.row}>
