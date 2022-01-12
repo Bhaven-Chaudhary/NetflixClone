@@ -27,7 +27,7 @@ export default function NavBar() {
             }
         })
         return () => {
-            window.removeEventListener('scroll')
+            window.removeEventListener('scroll', () => { })
         }
     }, [])
 
@@ -44,17 +44,16 @@ export default function NavBar() {
                 <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/799px-Netflix_2015_logo.svg.png' alt="Netflix" />
                 <ul>
                     <li>
-                        <NavLink to='/'>Home</NavLink>
-                    </li>
-
-                    <li>
-                        <NavLink to='tv'> TV Shows</NavLink>
+                        <NavLink activeClassName={classes.activeLink} to='/' exact>Home</NavLink>
                     </li>
                     <li>
-                        <NavLink to='/movie'>Movies</NavLink>
+                        <NavLink activeClassName={classes.activeLink} to='/tv'> TV Shows</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/popular">New and Popular</NavLink>
+                        <NavLink activeClassName={classes.activeLink} to='/movie'>Movies</NavLink>
+                    </li>
+                    <li>
+                        <NavLink activeClassName={classes.activeLink} to="/popular">New and Popular</NavLink>
                     </li>
                     <li>
                         <NavLink to="/"> My List</NavLink>

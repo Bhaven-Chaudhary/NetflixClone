@@ -29,6 +29,10 @@
   background-color: rgb(20, 20, 20);
 }
 
+.activeLink {
+  font-weight: 600;
+}
+
 .navbar ul {
   margin-left: 3.6vw;
   padding: 0px;
