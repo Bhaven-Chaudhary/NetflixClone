@@ -1,5 +1,6 @@
 import React from 'react'
 import classes from './SignIn.module.css'
+import { Link } from 'react-router-dom'
 
 export default function SignIn() {
     return (
@@ -28,7 +29,7 @@ export default function SignIn() {
 
                 <div className={classes.siginbottom}>
                     <label><img src="https://assets.nflxext.com/ffe/siteui/login/images/FB-f-Logo__blue_57.png" alt="FB" /> Login to Facebok</label>
-                    <h3>New to Netflix? <h5 style={{ display: 'inline', color: 'white', fontSize: '16px' }}>Sign up now</h5></h3>
+                    <h3>New to Netflix? <Link to='/'>Sign up now</Link></h3>
                     <span>This page is protected by Google reCAPTACHA to ensure you're not a bot.</span>
                 </div>
 

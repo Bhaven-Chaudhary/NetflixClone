@@ -49,8 +49,12 @@
   width: 15px;
   border: none;
 }
-
-.signinbox h5:hover {
+.signinbox a {
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+}
+.signinbox a:hover {
   text-decoration: underline;
 }
 
