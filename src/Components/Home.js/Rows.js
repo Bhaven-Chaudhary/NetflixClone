@@ -1,7 +1,7 @@
 import React from 'react'
-import Row from "../Components/Row"
+import Row from "./Row"
 import classes from './Rows.module.css'
-import useRequestUrl from './useRequestUrl'
+import useRequestUrl from '../custom-hooks/useRequestUrl'
 
 export default function Rows() {
 

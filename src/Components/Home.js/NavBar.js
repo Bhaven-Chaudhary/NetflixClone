@@ -1,5 +1,5 @@
 import React from 'react'
-import searchicon from '../logos/searchicon.png'
+import searchicon from '../../logos/searchicon.png'
 import { NavLink } from 'react-router-dom'
 
 import classes from './NavBar.module.css'

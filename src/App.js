@@ -1,9 +1,10 @@
 import './App.css';
-import Banner from './Components/Banner';
-import Bottom from './Components/Bottom'
-import NavBar from './Components/NavBar';
-import Rows from './Components/Rows';
-import { Route, Switch } from 'react-router-dom';
+// import Banner from './Components/Banner';
+// import Bottom from './Components/Home.js/Bottom'
+// import NavBar from './Components/Home.js/NavBar';
+// import Rows from './Components/Home.js/Rows';
+// import { Route, Switch } from 'react-router-dom';
+import Signing from './Components/Signing/Signing';
 
 function App() {
 
@@ -11,7 +12,11 @@ function App() {
   return (
     <>
 
-      <Switch>
+      <Signing></Signing>
+
+
+      {/* App content */}
+      {/* <Switch>
         <Route path='/'>
           <NavBar></NavBar>
           <Banner></Banner>
@@ -19,7 +24,7 @@ function App() {
           <Bottom></Bottom>
 
         </Route>
-      </Switch>
+      </Switch> */}
 
     </>
 

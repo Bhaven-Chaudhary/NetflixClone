@@ -1,0 +1,120 @@
+.signinNav img {
+  object-fit: cover;
+  height: 3.5vw;
+  padding: 1.5vw 3vw;
+}
+
+.signinbox {
+  background-color: rgba(0, 0, 0, 0.75);
+  border-radius: 4px;
+  margin: 0px 33% 64px;
+  padding: 60px 0px;
+}
+
+.signinForm {
+  margin: 0px 71px 66px;
+  display: flex;
+  flex-direction: column;
+}
+.signinForm h1 {
+  margin-bottom: 14px;
+}
+
+.signinForm input {
+  background-color: #333;
+  margin: 9px 0px;
+  height: 31px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  padding: 10px;
+  color: white;
+  font-size: inherit;
+}
+
+.signinForm button {
+  margin: 17px 0px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  padding: 13px;
+  color: white;
+  font-size: 18px;
+  background-color: red;
+  margin-top: 27px;
+}
+
+.formextra input {
+  margin-right: 5px;
+  width: 15px;
+  border: none;
+}
+
+.signinbox h5:hover {
+  text-decoration: underline;
+}
+
+.formextra {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  height: 10px;
+  color: #b3b3b3;
+}
+
+.opacity {
+  opacity: 50%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 153vh;
+  width: 100%;
+  position: absolute;
+  z-index: -10;
+  top: 0;
+}
+
+.siginbottom {
+  font-size: 13px;
+  color: #737373;
+  margin: 0px 75px;
+}
+
+.siginbottom label img {
+  object-fit: contain;
+  height: 21px;
+  vertical-align: middle;
+}
+
+.siginbottom h3 {
+  font-size: 16px;
+  padding: 16px 0px;
+}
+
+.bottom {
+  color: #737373;
+  padding: 37px 154px;
+  background-color: rgb(0 0 0 / 66%);
+}
+
+.bottom select {
+  padding: 0.6vw 1vw;
+  color: #737373;
+  border-radius: 4px;
+  margin: 23px 0px;
+  font-size: 1.1vw;
+  background-color: #000;
+  border: 1px solid #333;
+}
+
+.bottom div {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 160px;
+  row-gap: 18px;
+  font-size: 14px;
+  margin: 23px 0px;
+}
+.bottom div span {
+  width: 137px;
+}

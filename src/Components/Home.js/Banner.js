@@ -1,14 +1,15 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import requestUrl from '../requestUrl'
+import useRequestUrl from '../custom-hooks/useRequestUrl'
 import classes from './Banner.module.css'
 
 export default function Banner() {
     const [bannerMovie, setBannerMovie] = useState([])
     const [error, setError] = useState(false);
-
+    const requestUrl = useRequestUrl();
+    const bannerUrl = requestUrl.trendingUrl
     useEffect(() => {
-        fetch(requestUrl.trendingUrl).then(res => {
+        fetch(bannerUrl).then(res => {
             if (!res.ok) {
                 throw new Error('something went wrong')
             }
@@ -20,7 +21,7 @@ export default function Banner() {
         }).catch(error =>
             setError(error.message)
         )
-    }, [error])
+    }, [error, bannerUrl])
 
     const cutDescription = (s) => {
         if (s) {

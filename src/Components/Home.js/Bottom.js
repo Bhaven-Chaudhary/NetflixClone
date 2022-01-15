@@ -1,9 +1,9 @@
 import React from 'react'
 import classes from './Bottom.module.css'
-import fblogo from '../logos/fblogo.png'
-import instalogo from '../logos/instalogo.png'
-import twitterlogo from '../logos/twitterlogo.png'
-import youtubelogo from '../logos/youtubelogo.png'
+import fblogo from '../../logos/fblogo.png'
+import instalogo from '../../logos/instalogo.png'
+import twitterlogo from '../../logos/twitterlogo.png'
+import youtubelogo from '../../logos/youtubelogo.png'
 
 
 export default function Bottom() {
