@@ -36,7 +36,7 @@ export default function NavBar() {
 
     const logouthandler = () => {
         console.log('inside logout')
-        // ctx.setIsLoggedin(false)
+        ctx.onLogout()
     }
 
 
@@ -89,7 +89,7 @@ export default function NavBar() {
                                 <p id='arrow'>&gt;</p>
                             </div>
 
-                            <div id='optionsContainer' className={`${classes.optionsContainer} ${classes.selectActive} `} >
+                            <div id='optionsContainer' className={classes.optionsContainer} >
                                 <div className={classes.option}>
                                     <button onClick={logouthandler}>Logout</button>
                                 </div>

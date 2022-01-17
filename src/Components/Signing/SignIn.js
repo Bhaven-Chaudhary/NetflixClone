@@ -6,6 +6,7 @@ import AuthContext from '../../store/auth-context';
 export default function SignIn() {
     const enteredEmail = useRef();
     const enteredPassword = useRef();
+    const rememberChecked = useRef()
     const [signInError, setSignInError] = useState(false)
     const ctx = useContext(AuthContext)
 
@@ -14,6 +15,7 @@ export default function SignIn() {
     const signInHandler = (event) => {
         event.preventDefault();
         console.log("Signed In")
+        const remember = rememberChecked.current.checked
 
         fetch('https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyAimMobkX5Gd0dW_8JZf3YIfj9icdfr8Wg',
             {
@@ -30,7 +32,7 @@ export default function SignIn() {
 
         ).then(res => {
             if (res.ok) {
-                ctx.setIsLoggedin(true)
+                ctx.onLogin(remember)
                 setSignInError(false)
             } else {
                 return res.json().then(data => {
@@ -45,7 +47,6 @@ export default function SignIn() {
 
     }
 
-    console.log(ctx.isLoggedin + "from sign IN")
 
     return (
         <div>
@@ -66,7 +67,7 @@ export default function SignIn() {
 
 
                     <div className={classes.formextra}>
-                        <input id='checkbox' className={classes.checkboxc} type="checkbox" />
+                        <input ref={rememberChecked} id='checkbox' type="checkbox" />
                         <label htmlFor="checkbox">Remember me</label>
                         <h5 style={{ marginLeft: 'auto', fontSize: '13px', fontWeight: '100' }}>Need help?</h5>
                     </div>

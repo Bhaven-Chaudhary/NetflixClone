@@ -15,9 +15,9 @@
 
 .navbar {
   display: flex;
-  width: 92%;
+  width: 92vw;
   position: fixed;
-  padding-left: 3.8vw;
+  padding: 0px 46px;
   z-index: 5;
   background-color: transparent;
   align-items: center;

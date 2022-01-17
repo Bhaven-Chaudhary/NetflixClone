@@ -29,7 +29,7 @@ export default function SignUpPawssword(props) {
             }
         ).then(res => {
             if (res.ok) {
-                ctx.setIsLoggedin(true)
+                ctx.onLogin(true)
                 setError(null)
             }
             else {
