@@ -1,8 +1,28 @@
 import React from 'react'
 import classes from './SignUpPage.module.css'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
+import { useRef, useState } from 'react'
 
-export default function LoginPage() {
+
+export default function LoginPage(props) {
+    const emailInput = useRef()
+    const history = useHistory()
+    const [emailValid, setEmailValid] = useState(true)
+
+    const getStartedHandler = (event) => {
+        event.preventDefault();
+        const enteredEmail = emailInput.current.value;
+
+        if (enteredEmail.length > 5) {
+            props.setEnterdEmail(enteredEmail)
+            setEmailValid(true)
+            history.push('/password')
+        }
+        setEmailValid(false)
+    }
+
+
+
     return (
         <>
             <div className={classes.signupPage} style={{
@@ -29,18 +49,20 @@ export default function LoginPage() {
                     <h1>Unlimited movies, TV shows and more.</h1>
                     <h2>Watch anywhere. Cancel anytime.</h2>
                     <h3>Ready to watch? Enter your email to create or restart your membership.</h3>
-                    <div style={{
+                    <form onSubmit={getStartedHandler} style={{
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center'
                     }}>
-                        <input type="email" placeholder='Email address' />
-                        <Link to="/password">Get Started <span><img style={{
+                        <input ref={emailInput} type="email" placeholder='Email address' />
+                        <button>Get Started <span><img style={{
                             objectFit: 'contain',
                             height: '2vw',
                             marginBottom: '-5px'
-                        }} src="https://img.icons8.com/ios/50/000000/more-than.png" alt='' /></span></Link>
-                    </div>
+                        }} src="https://img.icons8.com/ios/50/000000/more-than.png" alt='' /></span>
+                        </button>
+                    </form>
+                    {!emailValid && <p style={{ color: 'yellow' }}>Please enter a valid email address.</p>}
                 </div>
 
                 {/* <div className={classes.gradient}></div> */}

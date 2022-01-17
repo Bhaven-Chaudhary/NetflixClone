@@ -78,7 +78,7 @@
   padding: 1vw;
   outline: none;
 }
-.signupData a {
+.signupData button {
   font-size: 1.9vw;
   padding: 1.1vw 1.5vw;
   background-color: #e30813;

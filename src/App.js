@@ -1,30 +1,21 @@
+import react, { useContext } from 'react';
 import './App.css';
-// import Banner from './Components/Banner';
-// import Bottom from './Components/Home.js/Bottom'
-// import NavBar from './Components/Home.js/NavBar';
-// import Rows from './Components/Home.js/Rows';
-// import { Route, Switch } from 'react-router-dom';
+import Home from './Components/Home.js/Home';
 import Signing from './Components/Signing/Signing';
+import AuthContext from './store/auth-context';
+
 
 function App() {
-
+  const ctx = useContext(AuthContext)
 
   return (
+
     <>
 
-      <Signing></Signing>
+      {!ctx.isLoggedin && <Signing></Signing>}
+      {ctx.isLoggedin && <Home></Home>}
 
 
-      {/* App content */}
-      {/* <Switch>
-        <Route path='/'>
-          <NavBar></NavBar>
-          <Banner></Banner>
-          <Rows></Rows>
-          <Bottom></Bottom>
-
-        </Route>
-      </Switch> */}
 
     </>
 

@@ -15,7 +15,7 @@
 
 .navbar {
   display: flex;
-  width: 96%;
+  width: 92%;
   position: fixed;
   padding-left: 3.8vw;
   z-index: 5;
@@ -61,21 +61,81 @@
   object-fit: contain;
 }
 
-.accounts img {
-  height: 2.4vw;
-  object-fit: contain;
-  border-radius: 5px;
-}
 .navbar div i {
   font-size: 1.7vw;
 }
 
 .accounts {
-  position: absolute;
-  right: 5vw;
+  margin-left: auto;
   display: flex;
   align-items: center;
   gap: 1.9vw;
   cursor: pointer;
   font-size: 1vw;
+  height: 30px;
+}
+.accounts img {
+  height: 32px;
+  object-fit: contain;
+  border-radius: 5px;
+  vertical-align: top;
+}
+
+/* custom select */
+.container {
+  max-height: 30px;
+}
+
+.selectBox {
+  display: flex;
+  height: fit-content;
+  flex-direction: column;
+}
+
+.optionsContainer {
+  background-color: black;
+  margin: 15px 0px;
+  padding: 10px 0px;
+  width: 100%;
+  transition: all 0.4s;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  border-radius: 4px;
+}
+
+.option button {
+  color: white;
+  background-color: transparent;
+  border: none;
+}
+.option button:hover {
+  text-decoration: underline;
+}
+
+.selectActive {
+  max-height: 50px;
+  opacity: 1;
+}
+
+.option {
+  padding: 10px;
+}
+
+.selected {
+  height: 30px;
+  width: 60px;
+  pointer-events: none;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.selected p {
+  font-size: 22px;
+  height: 22px;
+  width: 13px;
+  display: inline-block;
+  transform: rotate(90deg);
+  pointer-events: none;
+  transition: all 0.4s;
 }

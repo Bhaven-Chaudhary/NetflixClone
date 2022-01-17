@@ -1,7 +1,47 @@
-import React from 'react'
+import React, { useRef, useState, useContext } from 'react'
 import classes from './SignUpPassword.module.css'
 import { Link } from 'react-router-dom'
-export default function SignUpPawssword() {
+import AuthContext from '../../store/auth-context'
+
+
+export default function SignUpPawssword(props) {
+    const { enterdEmail } = props
+    const passwordInput = useRef()
+    const [error, setError] = useState()
+
+    const ctx = useContext(AuthContext)
+
+    // sending requset to firebase API to signup
+    const signUpHandler = (event) => {
+        event.preventDefault();
+        const enteredPassword = passwordInput.current.value;
+        console.log(enteredPassword)
+
+        fetch('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyAimMobkX5Gd0dW_8JZf3YIfj9icdfr8Wg',
+            {
+                method: 'POST',
+                body: JSON.stringify({
+                    email: enterdEmail,
+                    password: enteredPassword,
+                    returnSecureToken: true
+                }),
+                headers: { 'Content-Type': 'application/json' }
+            }
+        ).then(res => {
+            if (res.ok) {
+                ctx.setIsLoggedin(true)
+                setError(null)
+            }
+            else {
+                return res.json().then(data => {
+                    console.log(data)
+                    setError(data.error.message)
+                })
+            }
+        })
+    }
+
+    console.log(ctx.isLoggedin)
 
     return (
         <div className={classes.signupPass}>
@@ -24,10 +64,13 @@ export default function SignUpPawssword() {
 
                 <p>Enter your password and you'll be watching in no time.</p>
                 <p style={{ padding: '0px' }}>Email</p>
-                <h4>abc@gmail.com</h4>
-                <input type="text" placeholder='Enter your password' />
-                <a href="#">Forget your password?</a>
-                <button>Sign Up</button>
+                <h4>{enterdEmail}</h4>
+                <form onSubmit={signUpHandler} >
+                    <input ref={passwordInput} type="text" placeholder='Enter your password' />
+                    {error && <p style={{ color: 'red' }}>{error}</p>}
+                    <a href="#">Forget your password?</a>
+                    <button>Sign Up</button>
+                </form>
             </div>
 
             <div className={classes.bottom}>
@@ -45,12 +88,6 @@ export default function SignUpPawssword() {
                     <option >English</option>
                     <option >हिन्दी</option>
                 </select>
-            </div>
-
-
-            <div className={classes.opacity} style={{
-                backgroundImage: 'url(https://assets.nflxext.com/ffe/siteui/vlv3/9737377e-a430-4d13-ad6c-874c54837c49/cedd9792-de8e-4a6a-9825-c47f372570b6/IN-en-20220111-popsignuptwoweeks-perspective_alpha_website_medium.jpg)'
-            }} >
             </div>
 
         </div>
