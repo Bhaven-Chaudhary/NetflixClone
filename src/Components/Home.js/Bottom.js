@@ -12,10 +12,10 @@ export default function Bottom() {
 
             <div className={classes.bottom}>
                 <div className={classes.sponsers}>
-                    <a href="#"><img src={fblogo} alt="facebook" /></a>
-                    <a href="#"><img src={instalogo} alt="instagram" /></a>
-                    <a href="#"><img src={twitterlogo} alt="twitter" /></a>
-                    <a href="#"><img src={youtubelogo} alt="youtube" /></a>
+                    <a href="https://www.facebook.com/"><img src={fblogo} alt="facebook" /></a>
+                    <a href="https://www.instagram.com/"><img src={instalogo} alt="instagram" /></a>
+                    <a href="https://twitter.com/i/flow/login"><img src={twitterlogo} alt="twitter" /></a>
+                    <a href="https://www.youtube.com/"><img src={youtubelogo} alt="youtube" /></a>
                 </div>
 
                 <ul className={classes.bottomLinks}>
