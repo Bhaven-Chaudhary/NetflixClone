@@ -10,80 +10,84 @@
 .signupNavbar {
   display: flex;
   align-items: center;
-  height: 7vw;
-  padding: 0px 4vw;
-  width: 92%;
-  column-gap: 70%;
+  height: 95px;
+  padding: 0px 55px;
+  width: initial;
+  /* column-gap: 70%; */
   background-color: rgb(0 0 0 / 50%);
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 84%, transparent 99%);
 }
 
 .signupNavbar img {
   object-fit: contain;
-  height: 2.5vw;
+  height: 35px;
 }
-
+.signupNavButtons {
+  margin-left: auto;
+}
 .signupNavButtons select {
-  padding: 0.6vw 1vw;
+  padding: 8px 13px;
   background: rgba(0, 0, 0, 0.4);
   border: 1px solid #aaa;
   color: #fff;
   border-radius: 4px;
-  margin: 1vw;
-  font-size: 1.1vw;
+  margin: 13px;
+  font-size: 15px;
 }
 .signupNavButtons a {
-  padding: 0.6vw 1vw;
+  padding: 8px 13px;
   background: red;
   color: #fff;
   border: none;
   border-radius: 4px;
-  margin: 1vw;
-  font-size: 1.1vw;
+  margin: 13px;
+  font-size: 15px;
   text-decoration: none;
 }
 
 .signupData {
   width: 100%;
-  padding: 6vw 0;
+  padding: 80px 0;
   max-width: 950px;
   margin: 0 auto;
-  margin-top: 4vw;
+  margin-top: 50px;
   text-align: center;
   z-index: 1;
 }
 .signupData h1 {
-  font-size: 3.7vw;
-  padding: 0px 10vw;
+  font-size: 51px;
+  padding: 0px 137px;
 }
 .signupData h2 {
   text-align: center;
   font-family: "Netflix Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  margin: 1.5vw 10vw;
-  font-size: 2vw;
-}
-.signupData h2 {
+  margin: 20px 138px;
+  font-size: 27px;
   font-weight: 400;
-  font-family: "Netflix Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .signupData h3 {
-  margin: 1vw;
-  font-size: 1.3vw;
+  margin: 14px;
+  font-size: 18px;
 }
-
+.signupData form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .signupData input {
-  width: 32vw;
-  height: 2vw;
-  font-size: 1vw;
-  padding: 1vw;
+  width: 450px;
+  height: 28px;
+  font-size: 14px;
+  padding: 14px;
   outline: none;
 }
 .signupData button {
-  font-size: 1.9vw;
-  padding: 1.1vw 1.5vw;
+  font-size: 25px;
+  padding: 15.5px 21px;
   background-color: #e30813;
   border: none;
   color: white;
+  height: 59px;
   text-decoration: none;
 }
 
@@ -92,4 +96,66 @@
   height: 22vw;
   margin-top: -242px;
   mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 83%, transparent 98%);
+}
+
+@media only screen and (min-width: 522px) and (max-width: 730px) {
+  .signupData h1 {
+    font-size: 41px;
+    padding: 0px 20px;
+  }
+
+  .signupData form {
+    padding: 0px 17px;
+  }
+
+  .signupData form {
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  .signupData h2 {
+    margin: 20px 37px;
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 522px) {
+  .signupNavbar {
+    padding: 0px 13px;
+  }
+
+  .signupData h1 {
+    font-size: 25px;
+    padding: 0px 20px;
+  }
+  .signupData h2 {
+    margin: 20px 5px;
+    font-size: 18px;
+  }
+  .signupData h3 {
+    font-size: 12px;
+  }
+
+  .signupData form {
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  .signupData input {
+    width: 74vw;
+    height: 13px;
+  }
+
+  .signupNavButtons select {
+    font-size: 10px;
+  }
+  .signupNavButtons a {
+    font-size: 10px;
+  }
+
+  .signupData button {
+    font-size: 17px;
+    padding: 8.5px 11px;
+    height: 40px;
+  }
 }

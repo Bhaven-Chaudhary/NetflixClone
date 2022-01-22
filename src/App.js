@@ -15,8 +15,6 @@ function App() {
       {!ctx.isLoggedin && <Signing></Signing>}
       {ctx.isLoggedin && <Home></Home>}
 
-
-
     </>
 
   )

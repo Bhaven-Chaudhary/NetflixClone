@@ -40,7 +40,7 @@ export default function Row(props) {
             setMovieUrl("")
         } else {
             console.log(movie.title)
-            movieTrailer(movie?.title || "").then(url => {
+            movieTrailer(movie?.title || movie?.name || "").then(url => {
                 const urlParams = new URLSearchParams(new URL(url).search)
                 console.log(urlParams.get("v"))
                 setMovieUrl(urlParams.get("v"))

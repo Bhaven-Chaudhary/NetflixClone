@@ -65,6 +65,7 @@ export default function SignUpPawssword(props) {
                 <p>Enter your password and you'll be watching in no time.</p>
                 <p style={{ padding: '0px' }}>Email</p>
                 <h4>{enterdEmail}</h4>
+
                 <form onSubmit={signUpHandler} >
                     <input ref={passwordInput} type="text" placeholder='Enter your password' />
                     {error && <p style={{ color: 'red' }}>{error}</p>}

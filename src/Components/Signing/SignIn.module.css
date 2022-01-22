@@ -1,13 +1,15 @@
 .signinNav img {
   object-fit: cover;
-  height: 3.5vw;
-  padding: 1.5vw 3vw;
+  height: 48px;
+  padding: 20px 40px;
 }
 
 .signinbox {
   background-color: rgba(0, 0, 0, 0.75);
   border-radius: 4px;
-  margin: 0px 33% 64px;
+  margin: auto;
+  margin-bottom: 64px;
+  width: 457px;
   padding: 60px 0px;
 }
 
@@ -97,16 +99,16 @@
 
 .bottom {
   color: #737373;
-  padding: 37px 154px;
+  padding: 37px 11vw;
   background-color: rgb(0 0 0 / 66%);
 }
 
 .bottom select {
-  padding: 0.6vw 1vw;
+  padding: 10px 14px;
   color: #737373;
   border-radius: 4px;
   margin: 23px 0px;
-  font-size: 1.1vw;
+  font-size: 15px;
   background-color: #000;
   border: 1px solid #333;
 }
@@ -114,11 +116,42 @@
 .bottom div {
   display: flex;
   flex-wrap: wrap;
-  column-gap: 160px;
+  column-gap: 12vw;
   row-gap: 18px;
   font-size: 14px;
   margin: 23px 0px;
 }
 .bottom div span {
   width: 137px;
+}
+
+@media only screen and (min-width: 500px) and (max-width: 800px) {
+  .opacity {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .opacity {
+    display: none;
+  }
+
+  .signinbox {
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 4px;
+    margin-bottom: 0px;
+    width: auto;
+    padding: 13px 10px;
+  }
+
+  .signinForm {
+    margin: 0px;
+  }
+  .siginbottom {
+    margin: 15px 0px;
+  }
+
+  .bottom {
+    padding: 0px 10px;
+  }
 }

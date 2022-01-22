@@ -1,4 +1,5 @@
 import react, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 
 const AuthContext = react.createContext({
     isLoggedin: false,
@@ -8,6 +9,7 @@ const AuthContext = react.createContext({
 
 export const AuthContextProvider = (props) => {
     const [loggedIn, setLoggedIn] = useState(false)
+    const history = useHistory()
 
     useEffect(() => {
 
@@ -29,6 +31,7 @@ export const AuthContextProvider = (props) => {
 
     const logoutHandler = () => {
         setLoggedIn(false);
+        history.push("/")
         localStorage.removeItem('isLoggedin')
     };
 

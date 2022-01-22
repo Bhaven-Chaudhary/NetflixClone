@@ -49,16 +49,12 @@ export default function LoginPage(props) {
                     <h1>Unlimited movies, TV shows and more.</h1>
                     <h2>Watch anywhere. Cancel anytime.</h2>
                     <h3>Ready to watch? Enter your email to create or restart your membership.</h3>
-                    <form onSubmit={getStartedHandler} style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center'
-                    }}>
+                    <form onSubmit={getStartedHandler} >
                         <input ref={emailInput} type="email" placeholder='Email address' />
                         <button>Get Started <span><img style={{
                             objectFit: 'contain',
-                            height: '2vw',
-                            marginBottom: '-5px'
+                            height: '20px',
+                            verticalAlign: 'middle'
                         }} src="https://img.icons8.com/ios/50/000000/more-than.png" alt='' /></span>
                         </button>
                     </form>
