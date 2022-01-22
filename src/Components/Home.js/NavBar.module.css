@@ -42,9 +42,8 @@
   text-decoration: none;
   list-style: none;
   display: inline-block;
-  color: #fff;
   padding: 2px 0.7vw;
-  font-size: 1vw;
+  font-size: 14px;
   cursor: pointer;
   transition: color 0.4s ease-in;
 }
@@ -57,7 +56,7 @@
   color: #c2b0b0;
 }
 .navbar img {
-  height: 2vw;
+  height: 28px;
   object-fit: contain;
 }
 
@@ -71,7 +70,7 @@
   align-items: center;
   gap: 1.9vw;
   cursor: pointer;
-  font-size: 1vw;
+  font-size: 14px;
   height: 30px;
 }
 .accounts img {
@@ -138,4 +137,37 @@
   transform: rotate(90deg);
   pointer-events: none;
   transition: all 0.4s;
+}
+
+@media only screen and (min-width: 640px) and (max-width: 960px) {
+  .gradient {
+    width: 90vw;
+    height: 8vw;
+  }
+  .navbar {
+    width: 90vw;
+    height: 8vw;
+  }
+  .navbar img {
+    height: 25px;
+  }
+  .navbar ul li {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .gradient {
+    height: 8vw;
+  }
+  .navbar {
+    padding: 0px 13px;
+    height: 8vw;
+  }
+  .navbar img {
+    height: 17px;
+  }
+  .navbar ul li {
+    font-size: 10px;
+  }
 }

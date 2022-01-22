@@ -8,22 +8,19 @@
   /* position: absolute; */
   /* top: 13vw;
   left: 4vw; */
-  width: 37rem;
-
   display: inline-block;
-  width: 25vw;
+  width: 500px;
   margin-top: 13vw;
   margin-left: 4vw;
 }
 
 .bannerData h1 {
   font-size: 3vw;
-  width: 40vw;
 }
 .bannerData p {
   font-weight: 400;
   line-height: normal;
-  width: 100%;
+  width: 23vw;
   padding: 1vw 0px;
   font-size: 1.4vw;
   text-shadow: 2px 2px 4px rgb(0 0 0 / 45%);
@@ -37,13 +34,11 @@
 }
 
 .bannerButton button {
-  border-radius: 8px;
+  border-radius: 4px;
   cursor: pointer;
-  padding: 0.5vw 0px;
-  padding-left: 1.5vw;
-  padding-right: 2.4vw;
+  padding: 7px 20px;
   margin-right: 1.5vw;
-  font-size: 1.2vw;
+  font-size: 17px;
   font-weight: 700;
   outline: none;
   border: none;
@@ -59,4 +54,30 @@
   font-size: 2vw;
   padding-right: 10px;
   vertical-align: middle;
+}
+
+@media only screen and (min-width: 700px) and (max-width: 960px) {
+  .bannerData h1 {
+    font-size: 3vw;
+  }
+
+  .bannerData p {
+    font-size: 12px;
+    width: 23vw;
+  }
+  .bannerButton button {
+    font-size: 13px;
+    padding: 7px 11px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .bannerButton button {
+    font-size: 10px;
+    padding: 4px 9px;
+  }
+
+  .bannerButton button i {
+    font-size: 17px;
+  }
 }

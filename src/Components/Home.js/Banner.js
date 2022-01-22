@@ -49,7 +49,7 @@ export default function Banner() {
 
 
                 <div className={classes.bannerButton}>
-                    <button style={{ backgroundColor: 'white' }}><i style={{ fontSize: '1.9vw' }}>&#9654;</i>Play</button>
+                    <button style={{ backgroundColor: 'white' }}><i >&#9654;</i>Play</button>
                     <button style={{
                         color: 'white'
                     }}><i>&#9432;</i>More Info</button>

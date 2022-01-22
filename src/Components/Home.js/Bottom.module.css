@@ -13,7 +13,7 @@
 
 .sponsers img {
   object-fit: contain;
-  height: 1.4vw;
+  height: 20px;
   margin-right: 2vw;
 }
 
@@ -32,7 +32,7 @@
   width: 17.8vw;
   cursor: pointer;
   color: #768b83f7;
-  font-size: 1vw;
+  font-size: 14px;
 }
 
 .bottom button {
@@ -40,12 +40,12 @@
   background: transparent;
   border: 1px solid #687e76;
   padding: 0.6vw;
-  font-size: 1vw;
+  font-size: 14px;
 }
 
 .bottom p {
   color: #687e76;
-  font-size: 0.8vw;
+  font-size: 11px;
   padding-top: 10px;
 }
 .bottom ul li:hover {
@@ -54,4 +54,15 @@
 .bottom button:hover {
   border: 1px solid white;
   color: white;
+}
+
+@media only screen and (min-width: 560px) and (max-width: 820px) {
+  .bottom ul li {
+    width: 25.8vw;
+  }
+}
+@media only screen and (max-width: 560px) {
+  .bottom ul li {
+    width: 38.8vw;
+  }
 }
